@@ -3,13 +3,13 @@
 ## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Features](#features)
-3. [Tech Stack](#tech-stack)
-5. [Location-Based Feeds](#location-based-feeds)
-6. [Leaderboard and Proof of Work](#leaderboard-and-proof-of-work)
-7. [Getting Started](#getting-started)
-8. [Future Plans](#future-plans)
-9. [Contributing](#contributing)
-10. [License](#license)
+3. [Location-Based Feeds](#location-based-feeds)
+4. [Leaderboard and Proof of Work](#leaderboard-and-proof-of-work)
+5. [Tech Stack](#tech-stack)
+6. [Getting Started](#getting-started)
+7. [Future Plans](#future-plans)
+8. [Contributing](#contributing)
+9. [License](#license)
 
 ## Project Overview
 
