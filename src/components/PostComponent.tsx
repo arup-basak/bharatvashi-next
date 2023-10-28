@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { ArrowBigUp, ArrowBigDown, MessageCircle } from "lucide-react";
 import imageSample from "public/image.jpg";
+
 interface Props {
   imageUrl?: string;
   contentString: string;

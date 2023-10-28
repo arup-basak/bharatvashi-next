@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} grid grid-rows-[95%_1fr] h-screen overflow-hidden`}>
         <div>{children}</div>
         <div>
           <TabBar />

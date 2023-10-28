@@ -9,10 +9,14 @@ const TabBar = () => {
     { text: "State", url: "/state" },
   ];
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row justify-between bg-red-50 h-full">
       {data.map((item, index) => (
-        <Link href={item.url} key={index}>
-          {item.text}
+        <Link
+          href={item.url}
+          key={index}
+          className="flex justify-center items-center"
+        >
+          <div className="hover:bg-red-300">{item.text}</div>
         </Link>
       ))}
     </div>
