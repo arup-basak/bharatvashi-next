@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# भारतVasi [BharatVasi] - A Community Problem Management Platform
+
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+5. [Location-Based Feeds](#location-based-feeds)
+6. [Leaderboard and Proof of Work](#leaderboard-and-proof-of-work)
+7. [Getting Started](#getting-started)
+8. [Future Plans](#future-plans)
+9. [Contributing](#contributing)
+10. [License](#license)
+
+## Project Overview
+
+Our platform aims to bridge the gap between the community and local authorities. Users can register with their Aadhar number and phone number, and then post the issues they are facing. Other users can engage with these posts through upvotes, downvotes, comments, and reposts, making it easier for the most critical issues to gain attention. 
+
+Local corporations like municipalities can sign up on the app to monitor common problems within their jurisdiction. The feed they see is ranked based on post activity and the relevance to their jurisdiction. 
+
+Our long-term vision is to expand this platform to include various government services like Electricity, Railway, Roads, and Transportation, thus creating a comprehensive ecosystem for community welfare. The business model involves offering premium features, such as direct messaging with organizational accounts.
+
+## Features
+
+### User Features
+- Registration with Aadhar and phone number
+- Post and share community problems
+- Upvote, downvote, comment, and repost posts
+- Personalized user profiles
+- Follow and connect with other users
+
+### Corporation Features
+- Registration for corporations like municipalities
+- Monitor problems within their jurisdiction
+- Ranked feed based on post activity and jurisdiction
+- Engage with users to address issues directly
+
+### Future Features
+- Integration with government services
+- Direct Messaging with organizational accounts (Premium feature)
+
+## Location-Based Feeds
+
+To enhance the user experience, we are introducing location-based feeds. Users can view posts from different geographical levels, ensuring they stay informed about problems that matter to them:
+
+- *Local*: Posts related to their immediate vicinity.
+- *State*: Issues from within their state.
+- *Nation*: Problems that affect the entire country.
+- *International*: Global concerns.
+
+This feature allows users to focus on problems within their chosen geographic scope, fostering a stronger sense of community and engagement.
+
+## Leaderboard and Proof of Work
+
+Our platform will have a leaderboard that ranks municipal corporations based on their "Proof of Work." Municipal corporations can repost a citizen's issue post with details of the actions they have taken to address the problem, serving as proof of their commitment to solving community issues.
+
+Users can upvote these proof of work posts, and municipal corporations will gain higher ranks on the leaderboard as they accumulate more upvotes. This gamified approach encourages local authorities to be more proactive in addressing community concerns, promoting transparency and accountability.
+
+## Tech Stack
+
+Our frontend is built using the latest and greatest technologies, ensuring a smooth and engaging user experience:
+
+- [Next.js](https://nextjs.org/) - A React framework for server-rendered React applications.
+- [React](https://reactjs.org/) - Building user interfaces.
+- [Redux](https://redux.js.org/) - State management.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
+- [Axios](https://axios-http.com/) - For making API requests.
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy of this project up and running, follow these simple steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. *Clone the repository*:
+   bash
+   git clone https://github.com/yourusername/community-problem-management-frontend.git
+   cd community-problem-management-frontend
+   
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. *Install dependencies*:
+   bash
+   npm install
+   
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. *Run the development server*:
+   bash
+   npm run dev
+   
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. *Open your browser* and navigate to `http://localhost:3000`.
 
-## Learn More
+## Future Plans
 
-To learn more about Next.js, take a look at the following resources:
+We have grand plans for the future! We intend to expand our platform by integrating government services such as Electricity, Railway, Roads, and Transportation. We'll also be introducing premium features that allow direct messaging with organizational accounts, providing a seamless channel for users to communicate with local authorities.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+We welcome contributions from developers who share our vision of enhancing community welfare through technology. Feel free to submit a pull request or open an issue if you have any suggestions or ideas.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code as per your requirements.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you for being a part of our journey to create a better and more connected community!
+
+Happy coding! 🚀🌟
