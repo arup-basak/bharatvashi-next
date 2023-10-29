@@ -1,12 +1,22 @@
-import React from 'react';
- 
+import axios from "axios";
+import {useState} from "react";
+
+
 interface Props {
-  name: string,
-  userId: string,
-  contentString: string
+  id: any
+  name: string;
+  userId: string;
+  contentString: string;
 }
 
 const TwitterPost = (props: Props) => {
+  const vote = async (action: 'upvote' | 'downvote') => {
+    const response = await axios.post(`http://170.187.248.196:3000/posts/${props.id}/vote`, {action: action});
+    const jsonData = response.data;
+    if(jsonData.response) {
+      // TODO("HAVE TO IMPLEMENT HOOKS")
+    }
+  };
   return (
     <div className="bg-white shadow-md rounded-md p-4 max-w-md mx-auto my-4">
       <div className="flex">
@@ -29,62 +39,38 @@ const TwitterPost = (props: Props) => {
         />
       </div>
       <div className="flex items-center mt-4">
-        <svg
-          className="w-6 h-6 text-gray-500 mr-3"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-        <svg
-          className="w-6 h-6 text-gray-500 mr-3"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 15l7-7 7 7"
-          />
-        </svg>
-        <svg
-          className="w-6 h-6 text-gray-500 mr-3"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-        <svg
-          className="w-6 h-6 text-gray-500"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M5 15l7-7 7 7"
-          />
-        </svg>
+        <span onClick={() => vote('upvote')}>
+          <svg
+            className="w-6 h-6 text-gray-500 mr-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </span>
+        <span onClick={() => vote('downvote')}>
+          <svg
+            className="w-6 h-6 text-gray-500 mr-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 15l7-7 7 7"
+            />
+          </svg>
+        </span>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import PostComponent from "@/components/PostComponent";
+import Post from "@/components/Post";
 
 interface ResponseInterface {
   response: boolean;
@@ -12,12 +12,15 @@ interface ResponseInterface {
 
 const National = () => {
   const baseUrl = process.env.BASE_URL as string;
-  const [data, setData] = useState<ResponseInterface>({ response: false, data: [] });
+  const [data, setData] = useState<ResponseInterface>({
+    response: false,
+    data: [],
+  });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post(`http://170.187.248.196/posts/`);
+        const response = await axios.post(`http://170.187.248.196:3000/posts/`);
         const jsonData: ResponseInterface = response.data;
         setData(jsonData);
       } catch (error) {
@@ -33,7 +36,12 @@ const National = () => {
       {data.response && data.data.length > 0 ? (
         data.data.map((item, index) => (
           <div key={index}>
-            <PostComponent contentString={item.contentString} />
+            <Post
+              contentString={item.contentString as string}
+              id={item.id}
+              name={"Arup Basak"}
+              userId={item.userId}
+            />
           </div>
         ))
       ) : (
