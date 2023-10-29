@@ -17,7 +17,7 @@ const National = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post(`http://172.17.0.1:3000/posts`);
+        const response = await axios.post(`http://170.187.248.196/posts/`);
         const jsonData: ResponseInterface = response.data;
         setData(jsonData);
       } catch (error) {

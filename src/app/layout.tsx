@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import TabBar from "@/components/TabBar";
+import SessionLayout from "@/components/RootLayout";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -17,11 +18,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} grid grid-rows-[95%_1fr] h-screen overflow-hidden`}>
-        <div>{children}</div>
-        <div>
-          <TabBar />
-        </div>
+      <body
+        className={`${inter.className} grid grid-rows-[95%_1fr] h-screen overflow-hidden`}
+      >
+        <SessionLayout>
+          <div>{children}</div>
+          <div>
+            <TabBar />
+          </div>
+        </SessionLayout>
       </body>
     </html>
   );

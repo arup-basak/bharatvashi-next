@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowBigUp, ArrowBigDown, MessageCircle } from "lucide-react";
 import imageSample from "public/image.jpg";
 
+
 interface Props {
   imageUrl?: string;
   contentString: string;
@@ -18,6 +19,7 @@ const PostComponent = (props: Props) => {
           alt={props.contentString}
           height={200}
           width={200}
+          className="bg-cover bg-no-repeat"
         />
       </div>
       <div className="flex flex-row">
