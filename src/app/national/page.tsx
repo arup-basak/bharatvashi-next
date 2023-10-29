@@ -4,38 +4,30 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Post from "@/components/Post";
 
-interface ResponseInterface {
-  response: boolean;
-  data: any[];
-  error?: string;
-}
 
 const National = () => {
-  const baseUrl = process.env.BASE_URL as string;
-  const [data, setData] = useState<ResponseInterface>({
-    response: false,
-    data: [],
-  });
+  // const baseUrl = process.env.BASE_URL as string;
+  const [data, setData] = useState<any[]>();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.post(`http://170.187.248.196:3000/posts/`);
-        const jsonData: ResponseInterface = response.data;
-        setData(jsonData);
+        setData(response.data);
+        console.log(data)
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
-  }, [baseUrl]);
+  }, []);
 
   return (
-    <div>
-      {data.response && data.data.length > 0 ? (
-        data.data.map((item, index) => (
-          <div key={index}>
+    <div className="overflow-y-scroll">
+      {data && data.length > 0 ? (
+        data.map((item: any, index: number) => (
+          <div key={index} className="m-2">
             <Post
               contentString={item.contentString as string}
               id={item.id}

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import TabBar from "@/components/TabBar";
 import SessionLayout from "@/components/RootLayout";
 import "./globals.css";
+import TopAppBar from "@/components/TopAppBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,14 +20,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} grid grid-rows-[95%_1fr] h-screen overflow-hidden`}
+        className={`${inter.className} grid grid-rows-[1fr_85%_1fr] h-screen overflow-y-hidden`}
       >
-        <SessionLayout>
-          <div>{children}</div>
+        {/* <SessionLayout> */}
+          <div>
+            <TopAppBar />
+          </div>
+          <div className="overflow-y-scroll">{children}</div>
           <div>
             <TabBar />
           </div>
-        </SessionLayout>
+        {/* </SessionLayout> */}
       </body>
     </html>
   );

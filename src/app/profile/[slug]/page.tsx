@@ -29,11 +29,12 @@ const Page = ({ params }: { params: { slug: string } }) => {
           width={200}
           className="rounded-full"
         />
-        <div className="text-3xl">Adolf Hitler</div>
+        <div className="text-3xl">Arup Basak</div>
         {data && (
           <>
             {data.map((item: any, index: number) => (
               <Post
+              id={item.id}
                 name="Arup Basak"
                 key={index}
                 contentString={item.contentString}
