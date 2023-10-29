@@ -18,11 +18,49 @@ const Dashboard = () => {
     ));
   };
 
+  const topPostsData = [
+    { id: 1, title: 'Street Lights not Working', author: 'Nikhil Mishra' },
+    { id: 2, title: 'Garbage in the area', author: 'Atif Ali' },
+    // Add more top post data as needed
+  ];
+
+  const renderTopPosts = () => {
+    return (
+      <table className="table-auto w-full">
+        <thead>
+          <tr>
+            <th className="px-4 py-2">Title</th>
+            <th className="px-4 py-2">Author</th>
+          </tr>
+        </thead>
+        <tbody>
+          {topPostsData.map((post) => (
+            <tr key={post.id}>
+              <td className="border px-4 py-2">{post.title}</td>
+              <td className="border px-4 py-2">{post.author}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
+  };
+
   return (
     <div className="dashboard bg-gray-100 min-h-screen py-12">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Ward Performance Dashboard</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {renderWardData()}
+      <div className="container mx-auto">
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Dashboard</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Top Posts</h2>
+            {renderTopPosts()}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Ward Performance Dashboard</h2>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {renderWardData()}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

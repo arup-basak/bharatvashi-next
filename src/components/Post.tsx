@@ -3,6 +3,7 @@ import { useState } from "react";
 import StLight from "public/stlight.jpg";
 import Image from "next/image";
 import Profile from "public/image.jpg";
+import {MessageCircle} from 'lucide-react'
 
 interface Props {
   id: any;
@@ -81,6 +82,9 @@ const TwitterPost = (props: Props) => {
             />
           </svg>
           {/* <span>{props.downVote}</span> */}
+        </span>
+        <span>
+          <MessageCircle />
         </span>
       </div>
     </div>
