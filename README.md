@@ -59,11 +59,13 @@ Users can upvote these proof of work posts, and municipal corporations will gain
 
 Our frontend is built using the latest and greatest technologies, ensuring a smooth and engaging user experience:
 
-- [Next.js](https://nextjs.org/) - A React framework for server-rendered React applications.
-- [React](https://reactjs.org/) - Building user interfaces.
-- [Redux](https://redux.js.org/) - State management.
-- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework.
-- [Axios](https://axios-http.com/) - For making API requests.
+- [Next.js](https://nextjs.org/)
+- [Express](https://reactjs.org/)
+- [Node.js](https://nodejs.org/en)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [SQLite](https://www.sqlite.org/index.html)
+- [Prisma](https://www.prisma.io/)
+- VPS in LiNode
 
 ## Getting Started
 
